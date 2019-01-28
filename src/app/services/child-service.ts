@@ -23,6 +23,7 @@ export class ChildService {
         this.children = children;
     }
 
-    private getComponentsRefs() {
+    private focusOnComponent(index: number) {
+        this.children[index].elementRef.nativeElement.focus();
     }
 }
