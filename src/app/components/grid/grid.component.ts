@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChildren, ElementRef } from '@angular/core';
-import { GridParent } from '../interfaces/grid-parent';
-import { GridChild } from '../interfaces/grid-child';
-import { ChildService } from 'src/app/services/child-service';
+import { GridParent } from 'src/app/components/interfaces/grid-parent';
+import { NavService } from 'src/app/services/nav-service';
+import { GridChildDirective } from 'src/app/directives/grid-child.directive';
 
 @Component({
   selector: 'app-grid',
@@ -10,9 +10,9 @@ import { ChildService } from 'src/app/services/child-service';
 })
 export class GridComponent extends GridParent implements OnInit, AfterViewInit {
 
-  @ViewChildren('gridChild') gridChildren: GridChild [];
-  constructor(childService: ChildService) {
-    super(childService);
+  @ViewChildren(GridChildDirective) gridChildren: GridChildDirective[];
+  constructor(navService: NavService) {
+    super(navService);
   }
 
   ngOnInit() {
@@ -21,6 +21,7 @@ export class GridComponent extends GridParent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     while (1) {
       if ( this.gridChildren) {
+        this.gridChildren[1].navigateTo();
         this.registerChildren(this.gridChildren);
         break;
       }

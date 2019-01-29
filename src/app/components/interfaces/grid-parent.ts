@@ -1,7 +1,7 @@
-import { GridChild } from './grid-child';
-import { HostListener, ElementRef } from '@angular/core';
-import { KEY_CODE } from '../enums/KEY_CODE';
-import { ChildService } from 'src/app/services/child-service';
+import { HostListener } from '@angular/core';
+import { NavService } from 'src/app/services/nav-service';
+import { GridChildDirective } from 'src/app/directives/grid-child.directive';
+import { KEY_CODE } from 'src/app/components/enums/KEY_CODE';
 
 export abstract class GridParent {
 
@@ -11,14 +11,14 @@ export abstract class GridParent {
         }
     }
 
-    constructor(public childService: ChildService) {
+    constructor(public navService: NavService) {
     }
 
-    public registerChildren(children: GridChild[]) {
-        this.childService.registerChildren(children);
+    public registerChildren(children: GridChildDirective[]) {
+        this.navService.registerChildren(children);
+        this.navService.selectComponent(1);
     }
 
     public grantControl(ref: string) {
-
     }
 }
