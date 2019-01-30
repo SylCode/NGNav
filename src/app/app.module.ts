@@ -20,6 +20,7 @@ import { GridChildDirective } from './directives/grid-child.directive';
     AppRoutingModule
   ],
   providers: [NavService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [GridChildDirective]
 })
 export class AppModule { }
