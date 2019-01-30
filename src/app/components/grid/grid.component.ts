@@ -10,7 +10,7 @@ import { GridChildDirective } from 'src/app/directives/grid-child.directive';
 })
 export class GridComponent extends GridParent implements OnInit, AfterViewInit {
 
-  @ViewChildren(GridChildDirective) gridChildren: GridChildDirective[];
+  @ViewChildren(GridChildDirective) gridChildren;
   constructor(navService: NavService) {
     super(navService);
   }
@@ -21,7 +21,7 @@ export class GridComponent extends GridParent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     while (1) {
       if ( this.gridChildren) {
-        this.gridChildren[1].navigateTo();
+        this.gridChildren.first.test();
         this.registerChildren(this.gridChildren);
         break;
       }

@@ -16,7 +16,6 @@ export abstract class GridParent {
 
     public registerChildren(children: GridChildDirective[]) {
         this.navService.registerChildren(children);
-        this.navService.selectComponent(1);
     }
 
     public grantControl(ref: string) {
