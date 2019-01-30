@@ -1,9 +1,9 @@
-
-import { KEY_CODE } from 'src/app/components/enums/KEY_CODE';
-import { GridChildDirective } from 'src/app/directives/grid-child.directive';
 import { Injectable } from '@angular/core';
+import { GridChildDirective } from '../directives/grid-child.directive';
+import { NavigationMap } from '../components/interfaces/navigation-map';
 import { Observable } from 'rxjs';
-import { NavigationMap } from 'src/app/components/interfaces/navigation-map';
+import { KEY_CODE } from '../components/enums/KEY_CODE';
+
 
 @Injectable()
 export class NavService {

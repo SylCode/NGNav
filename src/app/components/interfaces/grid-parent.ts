@@ -1,6 +1,5 @@
-
-import { NavService } from 'src/app/services/nav-service';
-import { GridChildDirective } from 'src/app/directives/grid-child.directive';
+import { NavService } from '../../services/nav-service';
+import { GridChildDirective } from '../../directives/grid-child.directive';
 
 export abstract class GridParent {
 

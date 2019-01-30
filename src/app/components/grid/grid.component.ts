@@ -1,7 +1,9 @@
-import { Component, OnInit, AfterViewInit, ViewChildren, ElementRef } from '@angular/core';
-import { GridParent } from 'src/app/components/interfaces/grid-parent';
-import { NavService } from 'src/app/services/nav-service';
-import { GridChildDirective } from 'src/app/directives/grid-child.directive';
+import { Component, OnInit, AfterViewInit, ViewChildren } from '@angular/core';
+import { GridParent } from '../interfaces/grid-parent';
+import { GridChildDirective } from '../../directives/grid-child.directive';
+import { NavService } from '../../services/nav-service';
+
+
 
 @Component({
   selector: 'app-grid',
