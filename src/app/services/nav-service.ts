@@ -65,7 +65,9 @@ export class NavService {
     }
 
     private performNavigation(direction: string) {
-        this.selectComponent(this.navMap[this.currentNavState][direction]);
+        if (this.navMap[this.currentNavState][direction] !== undefined) {
+            this.selectComponent(this.navMap[this.currentNavState][direction]);
+        }
     }
 
     private processKeyInput(keyCode: number): boolean {
