@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ChangeDetectorRef, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,6 +6,8 @@ import { Component, OnInit, AfterViewInit, ChangeDetectorRef, ElementRef } from 
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit, AfterViewInit {
+
+  @Input() public placeholder: string;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {}
 

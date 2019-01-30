@@ -21,6 +21,10 @@ export class GridChildDirective {
     this.elementRef.nativeElement.style.background = 'green';
   }
 
+  public leave() {
+    this.elementRef.nativeElement.style.background = 'none';
+  }
+
   public test() {
     console.log(`Directive with ref: ${this.elementRef} was called`);
   }

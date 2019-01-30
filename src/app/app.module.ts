@@ -7,13 +7,15 @@ import { GridComponent } from './components/grid/grid.component';
 import { ChildComponent } from './components/child/child.component';
 import { NavService } from './services/nav-service';
 import { GridChildDirective } from './directives/grid-child.directive';
+import { RandomComponent } from './components/random/random.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GridComponent,
     ChildComponent,
-    GridChildDirective
+    GridChildDirective,
+    RandomComponent
   ],
   imports: [
     BrowserModule,

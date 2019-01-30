@@ -10,6 +10,22 @@ import { GridChildDirective } from 'src/app/directives/grid-child.directive';
 })
 export class GridComponent extends GridParent implements OnInit, AfterViewInit {
 
+  public placeholders = [
+    'Enter',
+    'The',
+    'Sandman',
+    'by',
+    'Metallica',
+    'Ya',
+    'gotta',
+    'make',
+    'do',
+    'with',
+    'what',
+    'ya',
+    'got'
+  ];
+
   @ViewChildren(GridChildDirective) gridChildren;
   constructor(navService: NavService) {
     super(navService);
@@ -21,8 +37,7 @@ export class GridComponent extends GridParent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     while (1) {
       if ( this.gridChildren) {
-        this.gridChildren.first.test();
-        this.registerChildren(this.gridChildren);
+        this.registerChildren(this.gridChildren.toArray());
         break;
       }
     }

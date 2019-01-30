@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+.selected {
+    border: 6px solid orange;
+}
+
+.control {
+    border: 6px solid rgb(0, 255, 255);
+}
+
+p {
+  font-family: "Myriad Web", "myriad_pc", "Times New Roman";
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+}
